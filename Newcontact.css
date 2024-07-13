@@ -1,0 +1,486 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(to right, #21212a, #000000);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #21212a, #000000);
+    padding: 1.2vw 5vw;
+    position: relative;
+}
+
+.logo {
+    margin-left:-3.8vw;
+    color: white;
+    font-size: 1.8vw;
+    font-weight: 300;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 7vw;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1vw;
+    transition: all .5s;
+
+}
+.nav-links a:hover {
+    transform: scale(1.1);
+    color: lightseagreen;
+    cursor: pointer;
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon #i {
+    width: 25px;
+    font-size: 4vw;
+    height: 4px;
+    color: rgb(255, 255, 255);
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.nav-links.active {
+    display: flex;
+}
+
+.login-card {
+    margin-top: 3vw;
+    width: 18vw;
+    height: 30vw;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 3.5vw;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 37vw;
+    margin-bottom: 2vw;
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(250, 249, 249, 0.34);
+    transform: rotate(-5deg);
+    border-radius: 10px;
+    z-index: -1;
+}
+/* ---------- */
+
+/* Login Card Logo */
+
+
+.login-card-logo img {
+    margin-bottom: -1vw;
+    width: 70px;
+}
+/* ---------- */
+
+/* Login Card Standard */
+.login-card-logo,
+.login-card-header,
+.login-card-footer {
+    text-align: center;
+    font-size: .5vw;
+}
+
+.login-card a {
+    text-decoration: none;
+    color: #2d2a4d;
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
+/* ---------- */
+
+/* Login Card Header */
+.login-card-header {
+    margin-bottom: 1vw;
+}
+
+.login-card-header h1 {
+    font-size: 2vw;
+    font-weight: 550;
+    margin-bottom: .2rem;
+}
+
+.login-card-header h1+div {
+    font-size: .7vw;
+    opacity: .8;
+}
+/* ---------- */
+
+/* Login Card Form */
+.login-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+    margin-left: -2vw;
+    margin-right: 2.3vw;
+}
+.login-card-form .form-item {
+    position: relative;
+}
+
+.login-card-form .form-item .form-item-icon {
+    position: absolute;
+    top: .90vw;
+    left: 1.4vw;
+    font-size: .9vw;
+    opacity: .6;
+}
+
+.login-card-form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.login-card-form .form-item-other {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .9vw;
+    margin-bottom: .1vw;
+}
+
+.login-card-footer {
+    margin-top: .5vw;
+    font-size: .8vw
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"],
+.login-card input[type="tel"],
+.login-card input[type="email"] {
+    border: none;
+    outline: none;
+    font-size: .8vw;
+    background: rgba(255, 255, 255, 0.3);
+    padding: .8vw 1vw;
+    padding-left: calc(1vw * 3.5);
+    border-radius: 10vw;
+    width: 100%;
+    transition: background .5s;
+}
+
+.login-card input:focus {
+    background: rgb(243, 243, 243);
+}
+
+.login-card input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: black;
+}
+
+.login-card button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(160, 160, 160, 0.379);
+    font-weight: 1000;
+    font-size:.9vw;
+    color: rgb(0, 0, 0);
+    padding: .6vw;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: background .5s;
+}
+
+.login-card button:hover {
+    background-color: rgb(255, 255, 251);
+    cursor: pointer;
+}
+/* ---------- */
+
+.login-card-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: .4vw;
+}
+
+.login-card-social>div {
+    opacity: .8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1vw;
+}
+
+.login-card-social-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.login-card-social-btns a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 3.5vw;
+    height: 3.5vw;
+    background-color: rgba(255, 254, 254, 0.6);
+    border-radius: 100px;
+    transition: all .5s;
+}
+
+.login-card-social-btns a:hover {
+    background-color: lightseagreen;
+    transform: scale(1.1);
+}
+.login-card-footer{
+    color: #020101;
+}
+.login-card-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footer {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 50px;
+}
+#footerleft{
+   display: flex;
+   gap: 20px;
+   font-size: 1.1vw;
+}
+#footerright{
+    display: flex;
+    gap: 7vw;
+    align-items: center;
+
+}
+#footerright h5{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: .8vw;
+    font-weight: 500;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+#footer a{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+#footer a{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 500;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    
+    body{
+        height: 100%;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;       
+         top: 0;
+        right: 5;
+        z-index: 2;
+        width: 30vw;
+        height: 200vw;
+        backdrop-filter: blur(15px);
+        margin-top: 5vw;
+        margin-left: 40vw;
+        gap: 5vw;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left:-1.8vw;
+        margin-top: 2.7vw;
+        color: white;
+        font-size: 4.8vw;
+        font-weight: 300;
+    }
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+    .nav-links li a{
+    font-size: 4vw;
+    margin-left: 3vw;
+    }
+    .menu-icon {
+        display: flex;
+    }
+    .login-card {
+        margin-top: 25vw;
+        width: 65vw;
+        margin-left:15vw;
+        height: auto;    
+    }
+
+    .login-card-logo img {
+        margin-bottom: -2vw;
+        width: 70px;
+    }
+    .login-card-logo,
+    .login-card-header,
+    .login-card-footer {
+        text-align: center;
+        font-size: 5vw;
+    }
+    
+    .login-card-header {
+        margin-bottom: 2vw;
+    }
+    
+    .login-card-header h1 {
+        font-size: 7vw;
+        font-weight: 550;
+        margin-bottom: 1vw;
+    }
+    
+    .login-card-header h1+div {
+        font-size: 2.7vw;
+        opacity: .8;
+    }
+    .form-item{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5vw;
+        margin-left: 0vw;
+        margin-right: 15vw;
+    }
+    .login-card-form {
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+    }
+    .login-card-form .form-item .form-item-icon {
+        position: absolute;
+        top: 1.8vw;
+        left: 1.4vw;
+        font-size: 3vw;
+        opacity: .6;
+    }
+    .login-card-form .form-item-other {
+        font-size: 3vw;
+        margin-bottom: .4vw;
+    }
+
+    .login-card-footer {
+        margin-top: .5vw;
+        font-size: 2.5vw
+    }
+    .login-card input[type="text"],
+.login-card input[type="password"],
+.login-card input[type="tel"],
+.login-card input[type="email"] {
+    font-size: 2.5vw;
+    padding: 1.5vw 4vw;
+    padding-left: calc(2.4vw * 3.5);
+    
+}
+
+.login-card button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 1000;
+    font-size:3vw;
+    padding: 2.5vw;
+    letter-spacing: 1.5px;
+}
+.login-card-social {
+    gap: 1rem;
+    margin-top: 4vw;
+}
+.login-card-social>div {
+    font-size: 1vw;
+}
+.login-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footer{
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 2vw;
+}
+#footer a{
+    font-size: 3.4vw;
+    font-weight: 500;
+    text-decoration: none;
+    justify-content: space-between;
+}
+#footerleft{
+    font-size: 2.5vw;
+    font-weight: 500;
+    display: flex;
+    gap: 3vw;
+ }
+ #footerright{
+     display: flex;
+     gap:3vw;
+ }
+ #footerright h5{
+    color: #fff;
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+}
